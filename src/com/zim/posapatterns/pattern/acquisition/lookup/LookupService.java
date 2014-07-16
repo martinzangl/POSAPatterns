@@ -1,6 +1,6 @@
-package com.zim.posapatterns.pattern.aquisition;
+package com.zim.posapatterns.pattern.acquisition.lookup;
 
-import com.zim.posapatterns.controller.ResourceProvider;
+import com.zim.posapatterns.controller.ServiceProvider;
 import com.zim.posapatterns.services.Service;
 
 /**
@@ -8,14 +8,14 @@ import com.zim.posapatterns.services.Service;
  */
 public class LookupService {
 
-    private ResourceProvider resourceProvider;
+    private ServiceProvider serviceProvider;
 
     public LookupService(){
-        resourceProvider = ResourceProvider.getInstance();
+        serviceProvider = ServiceProvider.getInstance();
     }
 
     public <T extends Service>Service getService(Class<T> name){
-        Service service = resourceProvider.getService(name);
+        Service service = serviceProvider.getService(name);
 
         if(service != null){
             return service;
@@ -24,7 +24,7 @@ public class LookupService {
         try {
            // Can delegate to a creator?
             service = name.newInstance();
-            resourceProvider.addService(service);
+            serviceProvider.addService(service);
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
