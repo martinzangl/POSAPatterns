@@ -1,4 +1,4 @@
-package com.zim.posapatterns.pattern.acquisition.lookup;
+package com.zim.posapatterns.pattern.acquisition;
 
 import com.zim.posapatterns.controller.ServiceProvider;
 import com.zim.posapatterns.services.Service;

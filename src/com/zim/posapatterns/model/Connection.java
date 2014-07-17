@@ -4,6 +4,9 @@ package com.zim.posapatterns.model;
  * Developed by martin.zangl@globant.com
  */
 public class Connection implements Resource {
+
+    private Identity identity;
+
     @Override
     public void method1() {
         
@@ -12,5 +15,15 @@ public class Connection implements Resource {
     @Override
     public void method2() {
 
+    }
+
+    @Override
+    public Identity getIdentity() {
+        return identity;
+    }
+
+    @Override
+    public ResourceType type() {
+        return null;
     }
 }
