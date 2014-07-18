@@ -4,8 +4,8 @@ package com.zim.posapatterns.controller;
  * Developed by martin.zangl@globant.com
  */
 
-import com.zim.posapatterns.model.MessageQueue;
-import com.zim.posapatterns.model.Request;
+import com.zim.posapatterns.commons.MessageQueue;
+import com.zim.posapatterns.commons.Request;
 
 /**
  * The Scheduler runs in the active object's thread of control.  The

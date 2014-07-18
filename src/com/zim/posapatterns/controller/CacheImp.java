@@ -1,9 +1,9 @@
 package com.zim.posapatterns.controller;
 
 import android.content.res.Resources;
-import com.zim.posapatterns.model.Identity;
-import com.zim.posapatterns.model.Resource;
-import com.zim.posapatterns.pattern.lifecycle.Cache;
+import com.zim.posapatterns.commons.Identity;
+import com.zim.posapatterns.commons.Resource;
+import com.zim.posapatterns.pattern.resource.lifecycle.Cache;
 
 import java.util.HashMap;
 

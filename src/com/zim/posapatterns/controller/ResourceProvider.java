@@ -1,6 +1,6 @@
 package com.zim.posapatterns.controller;
 
-import com.zim.posapatterns.model.Resource;
+import com.zim.posapatterns.commons.Resource;
 
 import java.util.HashMap;
 import java.util.Map;

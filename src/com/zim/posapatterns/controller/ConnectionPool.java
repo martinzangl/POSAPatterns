@@ -1,8 +1,8 @@
 package com.zim.posapatterns.controller;
 
-import com.zim.posapatterns.model.Connection;
-import com.zim.posapatterns.model.Resource;
-import com.zim.posapatterns.pattern.lifecycle.Pool;
+import com.zim.posapatterns.commons.Connection;
+import com.zim.posapatterns.commons.Resource;
+import com.zim.posapatterns.pattern.resource.lifecycle.Pool;
 
 import java.util.Vector;
 

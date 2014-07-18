@@ -1,7 +1,7 @@
 package com.zim.posapatterns.controller;
 
-import com.zim.posapatterns.pattern.lifecycle.Coordination;
-import com.zim.posapatterns.pattern.lifecycle.Coordinator;
+import com.zim.posapatterns.pattern.resource.lifecycle.Coordination;
+import com.zim.posapatterns.pattern.resource.lifecycle.Coordinator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
