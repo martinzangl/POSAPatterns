@@ -1,8 +1,6 @@
 package com.zim.posapatterns.pattern.lifecycle;
 
-import com.zim.posapatterns.model.Resource;
-import com.zim.posapatterns.model.ResourceFactory;
-import com.zim.posapatterns.model.ResourceType;
+import com.zim.posapatterns.model.*;
 
 import java.util.HashMap;
 
@@ -37,6 +35,44 @@ public class ResourceLifeCycleManager {
         else {
             //handle errors
         }
+        return null;
+    }
+
+    public ResourceGroup createGroup(String idGroup, ManagedResource[] resources){
+        ResourceGroup group = new ResourceGroup(idGroup);
+
+        for (ManagedResource resource: resources){
+            group.add(resource, resource.type());
+        }
+
+        return group;
+    }
+
+    public void addResourceToGroup (ManagedResource resource, ResourceGroup group) {
+        group.add (resource, resource.type ());
+    }
+
+    public boolean release (ResourceGroup group) {
+        // Iterate over all resources in the group and release them using
+        // two-phase-commit protocol
+        // ...
+        return true;
+    }
+
+    public void release (ManagedResource resource) {
+        ResourceGroup group = this.findGroup (resource);
+        if (group != null)
+            group.release ();
+    }
+
+    public void setFactory (ResourceType type, ResourceFactory factory) {
+        resourceFactories.put (type, factory);
+    }
+
+
+    private ResourceGroup findGroup(ManagedResource resource) {
+        // Find the group to which this resource belongs to
+        // ..
         return null;
     }
 }
