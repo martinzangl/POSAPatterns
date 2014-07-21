@@ -1,13 +1,11 @@
 package com.zim.posapatterns.pattern.concurrent.eventhandler.reactor;
 
+import java.util.List;
+
 /**
  * Developed by martin.zangl@globant.com
  */
-public interface EventHandler {
+public interface SyncDemultiplexer<T> {
 
-    void handleEvent(Handler handler);
-
-    Handler getHandler();
-
-
+    List<T> select();
 }

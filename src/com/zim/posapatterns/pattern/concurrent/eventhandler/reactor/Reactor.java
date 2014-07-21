@@ -7,5 +7,5 @@ public interface Reactor {
 
     void handleEvents();
     void registerHandler(EventHandler eventHandler);
-    void unregisterHandler(Handler handler);
+    void unregisterHandler(EventHandler eventHandler);
 }
