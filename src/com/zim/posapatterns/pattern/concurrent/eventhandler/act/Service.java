@@ -5,5 +5,5 @@ package com.zim.posapatterns.pattern.concurrent.eventhandler.act;
  */
 public interface Service {
 
-    public void operation();
+    public void subscribe(ACT handler);
 }

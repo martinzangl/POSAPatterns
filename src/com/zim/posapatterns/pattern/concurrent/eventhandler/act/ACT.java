@@ -5,5 +5,5 @@ package com.zim.posapatterns.pattern.concurrent.eventhandler.act;
  */
 public interface ACT {
 
-    void handleEvent(CompletionEvent event);
+    void register(CompletionEvent event);
 }
